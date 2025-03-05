@@ -25,9 +25,16 @@ class Deck{
 	public void displayDeck(){
 		for (Card card : deck){
 			System.out.println(card);
-		}	
-
-
+		}
+	}
+	
+	public void printCard(int index){
+		 if (index >= 0 && index < deck.size()){
+			System.out.println(deck.get(index));
+		
+		} else{
+			System.out.println("Invalid card index.");
+		}
 	}
 
 	
@@ -51,6 +58,7 @@ class Deck{
     	System.out.println(card1);
     	System.out.println(card2);
 }
+	
 
 
 
