@@ -41,6 +41,10 @@ class Deck{
 		 return c1.getRank().equals(c2.getRank());
 	}
 
+	public boolean compareCard(Card c1, Card c2) {
+		return c1.getRank().equals(c2.getRank());
+	}
+
 	
 	public void shuffleDeck(){
 		Collections.shuffle(deck);
