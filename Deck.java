@@ -45,6 +45,16 @@ class Deck{
 		return c1.getRank().equals(c2.getRank());
 	}
 
+	 public boolean findCard(String rank, String suit) {
+		for (Card card : deck) {
+		    if (card.getRank().equalsIgnoreCase(rank) && 
+	card.getSuit().equalsIgnoreCase(suit)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 	
 	public void shuffleDeck(){
 		Collections.shuffle(deck);
