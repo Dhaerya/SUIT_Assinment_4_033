@@ -55,26 +55,19 @@ class Deck{
 		return false;
 	}
 
+	 public void dealCard(){
+		Collections.shuffle(deck);
+        	System.out.println("Five Random Cards:");
+        	for (int i = 0; i < 5; i++) {
+            		System.out.println(deck.get(i));
+		}
+	}
 	
+
 	public void shuffleDeck(){
 		Collections.shuffle(deck);
+		System.out.println("Deck shuffled.");
 	}
-
-
-	public void pickTwoRandomCards() {
-		if (deck.size() < 2) {
-        	System.out.println("Not enough cards in the deck.");
-        	return;
-    	}
-    	Random rand = new Random();
-    	Card card1 = deck.get(rand.nextInt(deck.size()));
-    	Card card2 = deck.get(rand.nextInt(deck.size()));
-    	while (card1 == card2) {
-		card2 = deck.get(rand.nextInt(deck.size()));
-   	}
-	System.out.println("Randomly selected cards:");
-    	System.out.println(card1);
-    	System.out.println(card2);
 }
 	
 
